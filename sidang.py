@@ -1,3 +1,5 @@
+import os
+import base64
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -6,8 +8,6 @@ import re
 import string
 import matplotlib.pyplot as plt
 import pickle
-import os
-import base64
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 from sklearn.model_selection import cross_val_score, StratifiedKFold, KFold, cross_validate
@@ -16,6 +16,14 @@ from sklearn.utils import shuffle
 from nltk.tokenize import word_tokenize
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from tqdm import tqdm
+
+# Tentukan lokasi direktori nltk_data lokal
+nltk_data_path = os.path.join(os.path.dirname(__file__), 'nltk_data')
+nltk.data.path.append(nltk_data_path)
+
+# Sekarang unduh data yang diperlukan (ini akan mengambil dari direktori lokal)
+nltk.download('stopwords', download_dir=nltk_data_path)
+nltk.download('punkt', download_dir=nltk_data_path)
 
 # Download resource NLTK yang dibutuhkan
 nltk.download('stopwords')
