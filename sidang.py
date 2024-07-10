@@ -18,12 +18,12 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from tqdm import tqdm
 
 # Tentukan lokasi direktori nltk_data lokal
-nltk_data_path = https://github.com/imamsyafiihreal/sidang_ready/tree/main/nltk/corpora
+nltk_data_path = 'github.com/imamsyafiihreal/sidang_ready/tree/main/nltk/corpora'
 nltk.data.path.append(nltk_data_path)
 
 # Sekarang unduh data yang diperlukan (ini akan mengambil dari direktori lokal)
-nltk.download('stopwords', download_dir=https://github.com/imamsyafiihreal/sidang_ready/tree/main/nltk/corpora/punkt)
-nltk.download('punkt', download_dir=https://github.com/imamsyafiihreal/sidang_ready/tree/main/nltk/corpora/stopwords)
+nltk.download('stopwords', download_dir='github.com/imamsyafiihreal/sidang_ready/tree/main/nltk/corpora/punkt')
+nltk.download('punkt', download_dir='github.com/imamsyafiihreal/sidang_ready/tree/main/nltk/corpora/stopwords')
 
 # Download resource NLTK yang dibutuhkan
 nltk.download('stopwords')
